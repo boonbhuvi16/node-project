@@ -1,0 +1,44 @@
+.verification-code {
+ display:block;
+}
+
+.verification-code input {
+  width: 50px;
+  height: 20px;
+  font-size: 25px;
+  text-align: center;
+  margin: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.verification-code input:focus {
+  border-color: #007bff;
+}
+h4{
+  text-align: center;
+}
+.verify{
+  margin-left: 600px;
+  margin-top: 25px;
+  border-color: #007bff;
+  border-radius: 50px;
+  width: 10%;
+  height: 30px;
+}
+.login__field {
+  padding: 20px 0px;  
+  position: relative; 
+  text-align: center;
+}
+.login__field input{
+  width: 30%;
+  height: 25px;
+  font-size: 15px;
+  text-align: center;
+  margin: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}

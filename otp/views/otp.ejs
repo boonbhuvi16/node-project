@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Verification Code</title>
+    <link rel="stylesheet" type="text/css" href="css/verification.css" />
+  </head>
+  <body>
+    <form action="/verify" method="POST">
+      <div>
+      
+      <div class="login__field">
+        <h4>Enter User Email to verify</h4>
+        <i class="fas fa-envelope"></i>
+        <input type="email" class="login__input" name="email" placeholder="Enter Email to Verify" required>
+    </div>
+    <h4>Enter verification code</h4>
+    <!-- <input type="text" class="login__input" name="otp" placeholder="Enter OTP" required> -->
+           <% for (let i = 1; i <= 6; i++) { %>
+          <input type="text" name="code<%= i %>" maxlength="1" pattern="[0-9]" required>
+        <% } %> 
+      </div>
+      
+      
+      <br>
+      <button type="submit" class="verify">Verify</button>
+    </div>
+    </form>
+    <script>
+      const inputs = document.querySelectorAll('.verification-code input');
+      inputs.forEach((input, index) => {
+        input.addEventListener('keyup', () => {
+          if (input.value.length >= input.maxLength) {
+            const nextInput = inputs[index + 1];
+            if (nextInput) {
+              nextInput.focus();
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
